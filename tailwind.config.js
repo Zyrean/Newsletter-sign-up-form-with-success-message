@@ -10,13 +10,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        strongCyan: "#26BAA4",
-        lightBlue: "#6173FF",
-        darkGrayishBlue: "#4C545D",
-        grayishBlue: "#9FABB2",
+        red: "#FF6257",
+        darkGrey: "#242742",
+        charcoalGrey: "#36384E",
+        grey: "#9294A0",
       },
       fontFamily: {
-        sans: ["Bai Jamjuree", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
     },
   },

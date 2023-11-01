@@ -4,9 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <title>Simple Tailwind Starter</title>
   </head>
-  <body>
-    <h1 class="text-3xl bg-blue-400">Tailwind</h1>
+  <body class="flex justify-center items-center">
+    <!-- Content Container -->
+    <section
+      id="newsletter-form"
+      class="flex flex-col max-w-md bg-blue-200 md:flex-row md:max-w-6xl md:h-fit"
+    >
+      <!-- Image Container -->
+      <div class="order-2">
+        <img
+          id="newsletter-form-img"
+          src="assets/images/illustration-sign-up-mobile.svg"
+          alt=""
+          class="w-full"
+        />
+        <div class="w-full"></div>
+      </div>
+      <!-- Information Container -->
+      <div class="flex flex-col h-fit my-8 mx-6 space-y-6">
+        <h1 class="text-darkGrey">Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <!-- Step Container -->
+        <div class="flex flex-col space-y-4">
+          <!-- Step 1 -->
+          <div class="flex space-x-4">
+            <div>
+              <img src="assets/images/icon-list.svg" alt="" class="" />
+            </div>
+            <p>Product discovery and building what matters</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex space-x-4">
+            <div>
+              <img src="assets/images/icon-list.svg" alt="" />
+            </div>
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex space-x-4">
+            <div>
+              <img src="assets/images/icon-list.svg" alt="" />
+            </div>
+            <p>And much more!</p>
+          </div>
+        </div>
+        <!-- Input and Button -->
+        <div class="flex flex-col">
+          <div class="flex justify-between mt-2">
+            <label for="email-address" class="font-extrabold text-xs"
+              >Email address</label
+            >
+            <p class="text-xs text-red font-semibold">Valid email required</p>
+          </div>
+          <input
+            class="px-4 py-4 mt-4 border rounded-lg text-darkGrey"
+            type="email"
+            name="email-newsletter"
+            id="email-newsletter"
+            placeholder="email@company.com"
+            maxlength="40"
+          />
+          <button class="py-4 mt-4 rounded-lg bg-darkGrey text-white">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="newsletter-form-thankyou" class="hidden">
+      <div class="flex flex-col my-8 mx-6 mt-40">
+        <div class="flex flex-col space-y-6">
+          <img src="assets/images/icon-list.svg" alt="" class="w-16" />
+          <h1>Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to <span>TEST123</span>. Please
+            open it and click the button inside to confirm your subscription.
+          </p>
+        </div>
+        <button class="py-4 mt-80 rounded-lg bg-darkGrey text-white">
+          Dissmiss message
+        </button>
+      </div>
+    </section>
   </body>
 </html>
