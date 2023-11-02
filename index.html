@@ -16,22 +16,27 @@
     <!-- Content Container -->
     <section
       id="newsletter-form"
-      class="flex flex-col max-w-md bg-blue-200 md:flex-row md:max-w-6xl md:h-fit"
+      class="flex flex-col max-w-md bg-white md:flex-row md:max-w-6xl md:h-fit md:py-10 md:px-10 md:rounded-3xl md:items-center"
     >
       <!-- Image Container -->
-      <div class="order-2">
+      <div class="md:ml-10 md:order-2 md:max-w-lg">
         <img
-          id="newsletter-form-img"
           src="assets/images/illustration-sign-up-mobile.svg"
           alt=""
-          class="w-full"
+          class="w-full newsletter-img-mobile"
         />
-        <div class="w-full"></div>
+        <img
+          src="assets/images/illustration-sign-up-desktop.svg"
+          alt=""
+          class="w-full newsletter-img-desk hidden"
+        />
       </div>
       <!-- Information Container -->
-      <div class="flex flex-col h-fit my-8 mx-6 space-y-6">
-        <h1 class="text-darkGrey">Stay updated!</h1>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <div class="flex flex-col h-fit my-8 mx-6 space-y-8 md:max-w-lg">
+        <h1 class="text-darkGrey md:text-6xl md:font-bold">Stay updated!</h1>
+        <p class="md:max-w-sm">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
         <!-- Step Container -->
         <div class="flex flex-col space-y-4">
           <!-- Step 1 -->
@@ -62,36 +67,65 @@
             <label for="email-address" class="font-extrabold text-xs"
               >Email address</label
             >
-            <p class="text-xs text-red font-semibold">Valid email required</p>
+            <p
+              class="text-xs text-red font-semibold hidden"
+              id="label-error-email"
+            >
+              Valid email required
+            </p>
           </div>
-          <input
-            class="px-4 py-4 mt-4 border rounded-lg text-darkGrey"
-            type="email"
-            name="email-newsletter"
-            id="email-newsletter"
-            placeholder="email@company.com"
-            maxlength="40"
-          />
-          <button class="py-4 mt-4 rounded-lg bg-darkGrey text-white">
+          <input class="px-4 py-4 mt-2 border outline-none rounded-lg
+          text-darkGrey hover:cursor-pointer focus:border-black
+          focus:placeholder:opacity-0 type="email" name="email-newsletter"
+          id="inp-email-newsletter" placeholder="email@company.com"
+          maxlength="40" />
+          <button
+            class="button-newsletter mt-4 hover:bg-gradient-to-r from-rose-500 to-orange-400 md:hover:shadow-2xl"
+            id="btn-subscribe"
+          >
             Subscribe to monthly newsletter
           </button>
         </div>
       </div>
     </section>
-    <section id="newsletter-form-thankyou" class="hidden">
+    <div id="newsletter-form-thankyou-mobile" class="hidden">
       <div class="flex flex-col my-8 mx-6 mt-40">
         <div class="flex flex-col space-y-6">
           <img src="assets/images/icon-list.svg" alt="" class="w-16" />
           <h1>Thanks for subscribing!</h1>
           <p>
-            A confirmation email has been sent to <span>TEST123</span>. Please
-            open it and click the button inside to confirm your subscription.
+            A confirmation email has been sent to
+            <span id="label-user-email-mobile" class="font-extrabold"
+              >TEST123</span
+            >. Please open it and click the button inside to confirm your
+            subscription.
           </p>
         </div>
         <button class="py-4 mt-80 rounded-lg bg-darkGrey text-white">
           Dissmiss message
         </button>
       </div>
-    </section>
+    </div>
+    <div id="newsletter-form-thankyou-desk" class="hidden">
+      <div
+        class="flex flex-col px-12 py-12 bg-white rounded-3xl max-w-md space-y-6"
+      >
+        <div class="flex flex-col space-y-6">
+          <img src="assets/images/icon-list.svg" alt="" class="w-16" />
+          <h1 class="text-5xl">Thanks for subscribing!</h1>
+          <p>
+            A confirmation email has been sent to
+            <span id="label-user-email-desk" class="font-extrabold"
+              >TEST123</span
+            >. Please open it and click the button inside to confirm your
+            subscription.
+          </p>
+        </div>
+        <button class="button-newsletter" id="btn-dismiss">
+          Dissmiss message
+        </button>
+      </div>
+    </div>
+    <script src="main.js"></script>
   </body>
 </html>

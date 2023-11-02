@@ -4,7 +4,7 @@
 
 @layer base {
   h1 {
-    @apply font-extrabold text-4xl;
+    @apply font-extrabold text-4xl md:text-8xl;
   }
 
   p {
@@ -12,37 +12,24 @@
   }
 
   body {
-    @apply h-screen;
+    @apply h-screen bg-darkGrey;
   }
 }
 
-/*
- @layer base {
-  
-  h3 {
-    @apply;
-  }
-  h5 {
-    @apply;
-  }
-  p,
-  a {
-    @apply;
-  }
+.button-newsletter {
+  @apply py-4 mt-4 rounded-lg bg-darkGrey text-white hover:bg-gradient-to-r from-rose-500 to-orange-400 md:hover:shadow-2xl;
 }
 
-.section-container {
-  @apply;
-}
-
-body {
-}
-
-@media (max-width: 576px) {
-  body {
+@media (min-width: 768px) {
+  .newsletter-img-mobile {
+    @apply hidden;
   }
-} 
 
- #newsletter-form-img {
-  width: auto;
-} */
+  .newsletter-img-desk {
+    @apply block;
+  }
+
+  h1 {
+    @apply font-extrabold text-4xl;
+  }
+}
